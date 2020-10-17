@@ -42,6 +42,16 @@ inquirer
         name: "license",
         choices: ["MIT" , "ISC", "GPLv2", "Apache"],
       },
+      {
+        type: "input",
+        message: "What is your GitHub username?",
+        name: "gituser"
+      },
+      {
+        type: "input",
+        message: "What is your email address?",
+        name: "email"
+      },
   ])
   .then(function(response) {
     console.log(response);
