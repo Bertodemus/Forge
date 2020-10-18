@@ -2,6 +2,7 @@
 const fs = require("fs");
 const inquirer = require("inquirer");
 let readParam = "";
+const licenses = ["[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)","[![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg?style=for-the-badge)](https://opensource.org/licenses/MPL-2.0)","[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg?style=for-the-badge)](https://www.gnu.org/licenses/gpl-3.0)","[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg?style=for-the-badge)](https://opensource.org/licenses/Apache-2.0)"]
 
 // array of questions for user
 inquirer
@@ -40,7 +41,7 @@ inquirer
         type: "list",
         message: "What are your test instructions?",
         name: "license",
-        choices: ["MIT" , "ISC", "GPLv2", "Apache"],
+        choices: ["MIT" , "Mozilla", "GPLv3", "Apache"],
       },
       {
         type: "input",
