@@ -64,6 +64,7 @@ inquirer
 
 ## Description
 ${response.description}
+${licBadge}
 
 ## Table of Contents
 
@@ -91,8 +92,9 @@ ${response.contribution}
 ${response.tests}
 
 ## Questions
-${response.gituser}
-${response.email}`
+Link to my GitHub Profile: [${response.gituser}](https://github.com/${response.gituser})
+
+If you would like to get in touch with me, go ahead and email me at: [${response.email}](mailto:${response.email})`
 
 
     fs.writeFile("readme.md",readParam, function(err){
