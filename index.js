@@ -58,20 +58,47 @@ inquirer
     // const readParam = response;
     // console.log(readParam);
 
-//     readParam =
-// `# Forge
-// App for generating Readme Files
-// <p>${response.name}</p>
-// <p>${response.location}</p>
-// <p>${response.bio}</p>
-// <p>${response.linkedin}</p>
-// <p>${response.github}</p>`
+    readParam =
+`
+# ${response.title}
+
+## Description
+${response.description}
+
+## Table of Contents
+
+* [Description](#description)
+* [Installation](#installation)
+* [Usage](#usage)
+* [License](#license)
+* [Contributing](#contributing)
+* [Tests](#tests)
+* [Questions](#questions)
+
+## Installation
+${response.installation}
+
+## Usage
+${response.usage}
+
+## License
+${response.license}
+
+## Contributing
+${response.contribution}
+
+## Tests
+${response.tests}
+
+## Questions
+${response.gituser}
+${response.email}`
 
 
-//     fs.writeFile("readme.md",readParam, function(err){
-//         if (err) {
-//             throw err;
-//         }
-//     });
-    
-  });
+    fs.writeFile("readme.md",readParam, function(err){
+        if (err) {
+            throw err;
+        }
+    });
+
+});
