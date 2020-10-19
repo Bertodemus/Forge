@@ -58,7 +58,7 @@ inquirer
       },
       {
         type: "list",
-        message: "Choose a theme?",
+        message: "Choose a theme for your title:",
         name: "theme",
         choices: ["Teal" , "Black" , "Golden" , "Red"],
       },
@@ -89,7 +89,7 @@ inquirer
       },
       {
         type: "list",
-        message: "What are your test instructions?",
+        message: "Which license do you wish to apply to this project?",
         name: "license",
         choices: ["MIT" , "MPL2.0" , "GPLv3" , "Apache"],
       },
