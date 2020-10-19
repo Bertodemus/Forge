@@ -2,6 +2,7 @@
 const fs = require("fs");
 const inquirer = require("inquirer");
 let readParam = "";
+let titleSvg = "";
 const licenses = [
     {
         license: "MIT",
@@ -108,9 +109,30 @@ inquirer
     const lic = licenses.filter(el => el.license === response.license);
     const bkg = themes.filter(el => el.theme === response.theme);
 
+    titleSvg = 
+`
+<svg height="45" width="600" role="img" xmlns="http://www.w3.org/2000/svg">
+
+<defs>
+<linearGradient id="grad3" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:${bkg[0].color1};stop-opacity:1" />
+      <stop offset="100%" style="stop-color:${bkg[0].color2};stop-opacity:0" />
+    </linearGradient>
+  </defs>
+  <rect width="600" height="45" fill="url(#grad3)" />
+  <text fill="#ffffff" font-size="36" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji" x="10" y="32">${response.title}</text>
+</svg>`
+
+    fs.writeFile("title.svg", titleSvg, function(err){
+        if (err) {
+            throw err;
+        }
+    });
+    
+
     readParam =
 `
-![Alt text](./title.svg)
+![Title with a gradient](./title.svg)
 
 #
 
@@ -152,7 +174,7 @@ Link to my GitHub Profile: [${response.gituser}](https://github.com/${response.g
 If you would like to get in touch with me, feel free to email me at: [${response.email}](mailto:${response.email})`
 
 
-    fs.writeFile("readme.md",readParam, function(err){
+    fs.writeFile("readme.md", readParam, function(err){
         if (err) {
             throw err;
         }
