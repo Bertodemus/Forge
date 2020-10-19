@@ -25,6 +25,29 @@ const licenses = [
     }
 ];
 
+const themes = [
+    {
+        theme: "Teal",
+        color1: "teal",
+        color2: "darkcyan",
+    },
+    {
+        theme: "Black",
+        color1: "black",
+        color2: "gray",
+    },
+    {
+        theme: "Golden",
+        color1: "goldenrod",
+        color2: "darkorange",
+    },
+    {
+        theme: "Red",
+        color1: "red",
+        color2: "blueviolet",
+    },
+];
+
 // array of questions for user
 inquirer
   .prompt([
@@ -32,6 +55,12 @@ inquirer
         type: "input",
         message: "What is the title of your project?",
         name: "title",
+      },
+      {
+        type: "list",
+        message: "Choose a theme?",
+        name: "theme",
+        choices: ["Teal" , "Black" , "Golden" , "Red"],
       },
       {
         type: "input",
@@ -76,25 +105,24 @@ inquirer
       },
   ])
   .then(function(response) {
-    console.log(response);
-
     const lic = licenses.filter(el => el.license === response.license);
-    // const lic = licenses.forEach(function(val,index) {
-    //     console.log(val.license);
-    //     console.log(response.license);
-    //     let licIndex;
-    //     if (val.license === response.license) {
-    //         licIndex = index;
-    //     }
-    //     return val;
-    // });
-    console.log(lic);
-    // const readParam = response;
-    // console.log(readParam);
+    const bkg = themes.filter(el => el.theme === response.theme);
 
     readParam =
 `
-# ${response.title}
+<svg height="45" width="600">
+
+<defs>
+<linearGradient id="grad3" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:${bkg[0].color1};stop-opacity:1" />
+      <stop offset="100%" style="stop-color:${bkg[0].color2};stop-opacity:0" />
+    </linearGradient>
+  </defs>
+  <rect width="600" height="45" fill="url(#grad3)" />
+  <text fill="#ffffff" font-size="36" x="10" y="36">${response.title}</text>
+</svg>
+
+#
 
 ## Description
 ${response.description}
