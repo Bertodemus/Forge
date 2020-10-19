@@ -110,17 +110,7 @@ inquirer
 
     readParam =
 `
-<svg height="45" width="600">
-
-<defs>
-<linearGradient id="grad3" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" style="stop-color:${bkg[0].color1};stop-opacity:1" />
-      <stop offset="100%" style="stop-color:${bkg[0].color2};stop-opacity:0" />
-    </linearGradient>
-  </defs>
-  <rect width="600" height="45" fill="url(#grad3)" />
-  <text fill="#ffffff" font-size="36" x="10" y="36">${response.title}</text>
-</svg>
+![Alt text](./title.svg)
 
 #
 

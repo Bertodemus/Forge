@@ -1,5 +1,5 @@
 
-<svg height="45" width="600">
+<!-- <svg height="45" width="600" role="img" xmlns="http://www.w3.org/2000/svg">
 
 <defs>
 <linearGradient id="grad3" x1="0%" y1="0%" x2="100%" y2="0%">
@@ -9,8 +9,8 @@
   </defs>
   <rect width="600" height="45" fill="url(#grad3)" />
   <text fill="#ffffff" font-size="36" x="10" y="32">Test Project</text>
-</svg>
-
+</svg> -->
+![Alt text](./title.svg)
 #
 
 ## Description
