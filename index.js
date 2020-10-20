@@ -1,8 +1,12 @@
 //Establish required modules
 const fs = require("fs");
 const inquirer = require("inquirer");
+
+//Variable assignments
 let readParam = "";
 let titleSvg = "";
+
+//Arrays for the question lists
 const licenses = [
     {
         license: "MIT",
@@ -49,7 +53,7 @@ const themes = [
     },
 ];
 
-// array of questions for user
+//Questions for user
 inquirer
   .prompt([
     {
@@ -106,9 +110,12 @@ inquirer
       },
   ])
   .then(function(response) {
+    //README file construction
+      //Checking for choices that the user made
     const lic = licenses.filter(el => el.license === response.license);
     const bkg = themes.filter(el => el.theme === response.theme);
 
+    //Construction of the SVG for the titel background
     titleSvg = 
 `
 <svg height="45" width="600" role="img" xmlns="http://www.w3.org/2000/svg">
@@ -123,16 +130,16 @@ inquirer
   <text fill="#ffffff" font-size="36" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji" x="10" y="32">${response.title}</text>
 </svg>`
 
-    fs.writeFile("title.svg", titleSvg, function(err){
+    fs.writeFile("./generated/title.svg", titleSvg, function(err){
         if (err) {
             throw err;
         }
     });
     
-
+    //Construction of the README file
     readParam =
 `
-![Title with a gradient](./title.svg)
+![Title with a gradient](../generated/title.svg)
 
 #
 
@@ -174,7 +181,7 @@ Link to my GitHub Profile: [${response.gituser}](https://github.com/${response.g
 If you would like to get in touch with me, feel free to email me at: [${response.email}](mailto:${response.email})`
 
 
-    fs.writeFile("readme.md", readParam, function(err){
+    fs.writeFile("./generated/readme.md", readParam, function(err){
         if (err) {
             throw err;
         }
