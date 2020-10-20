@@ -3,6 +3,15 @@
 Forge is a small command-line application that allows for the quick generation of a README file. The generated file is compatible with GitHub Flavored Markdown.
 
 
+## Table of Contents
+
+* [Description](#description)
+* [Installation](#installation)
+* [Usage](#usage)
+* [Screenshots](#screenshots)
+* [Questions](#questions)
+
+
 ## Description
 
 * Simple command-line application that can be run through [Node.js](https://nodejs.org/en/)
@@ -42,3 +51,12 @@ Example of questionnaire
 Example of a completed README
 
 ![example README](./images/resultRead.png)
+
+
+## Questions
+
+Feel free to get in touch with me if you have any questions or concerns.
+
+Link to my GitHub Profile: [Bertodemus](https://github.com/bertodemus)
+
+Email me at: [roberto@robertorubet.com](roberto@robertorubet.com)
