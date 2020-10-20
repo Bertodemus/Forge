@@ -1,6 +1,6 @@
 # Forge: A simple README generator
 
-Forge is small command-line application that allows for the quick generation of a README file. The generated file is compatible with GitHub Flavored Markdown.
+Forge is a small command-line application that allows for the quick generation of a README file. The generated file is compatible with GitHub Flavored Markdown.
 
 
 ## Description
