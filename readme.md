@@ -29,3 +29,16 @@ Forge is small command-line application that allows for the quick generation of 
 ## Usage
 
 When the application is initiated, the user wiill be met with a series of questions. These questions will define the parameters of the README file.  Once the user has completed answering all of the questions, a `README.MD` file and a `title.svg` file will be placed in the "generated" folder.
+
+
+## Screenshots
+
+Example of questionnaire
+
+![example of questions](./images/sampleQuestions.png)
+
+
+
+Example of a completed README
+
+![example README](./images/resultRead.png)
