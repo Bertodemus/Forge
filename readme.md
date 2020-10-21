@@ -53,6 +53,13 @@ Example of a completed README
 ![example README](./images/resultRead.png)
 
 
+## Video
+
+This link will allow to you download a small video file, which is a live demo of the application.
+
+[Forge Live Demo](https://github.com/Bertodemus/Forge/blob/main/images/ForgeDemo.mp4?raw=true)
+
+
 ## Questions
 
 Feel free to get in touch with me if you have any questions or concerns.
