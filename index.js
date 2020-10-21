@@ -139,7 +139,7 @@ inquirer
     //Construction of the README file
     readParam =
 `
-![Title with a gradient](../generated/title.svg)
+![Title with a gradient](title.svg)
 
 #
 
